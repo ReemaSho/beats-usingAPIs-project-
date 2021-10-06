@@ -71,9 +71,14 @@ font-style: italic;
     width : 23%;
     margin: 1%;
 }
+
 .track-container img{
     width: 100%;
 }
+.track-container img:hover{
+   opacity: .7;
+}
+
 audio{
  outline: none;
  width: 100%;
@@ -81,6 +86,7 @@ background-color:var(--light-grey);
 height: 45px;
 position: relative;
  bottom:8%;
+ opacity: .5;
  
 }
 h3,h4,h2,.home,#about{
