@@ -1,12 +1,7 @@
 
 import { APIKEY } from '../constants.js';
 import {createArtistPageHeader} from '../views/artistPageView.js';
-import {
-  getDOMElement,
-} from '../utils/DOMUtils.js';
-
 import {displayTracks }from './handleTracks.js';
-
 import{fetchData } from './mainFetchDataFun.js';
 
 export const getArtistData =async (artistHref )=>{
@@ -18,10 +13,10 @@ export const getArtistData =async (artistHref )=>{
      if(artistInfo){
        const artistImage = artistInfo[0].images[3].url;
        const artistDetails = artistInfo[1].artists[0];
-       const artistTopTracks = artistInfo[2];
-       displayTracks(artistTopTracks,true );
-   const {bios,blurbs,name} = artistDetails;
-     if(blurbs.length > 0){
+       const dataTopTracks = artistInfo[2];
+       displayTracks(dataTopTracks,true );
+       const {bios,blurbs,name} = artistDetails;
+       if(blurbs.length > 0){
        const artistBlurbs = blurbs.join(' ')
        createArtistPageHeader(artistImage,name ,artistBlurbs)
       } else if(bios){
@@ -30,12 +25,8 @@ export const getArtistData =async (artistHref )=>{
       } else {
        createArtistPageHeader( artistImage,name)
       }
-       const artistName = getDOMElement('artist-Name');
-       if(artistName){
-           artistName.addEventListener('click', ()=>{
-               displayTracks(artistTopTracks,true);
-              })
-           }
+      const artistTopTracksEle =document.querySelectorAll('.artist-top-tracks');
+      artistTopTracksEle.forEach((header)=> header.classList.add('display-none'));
        }else{
          throw new Error('Request Failed!')
        }

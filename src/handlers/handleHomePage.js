@@ -1,11 +1,7 @@
 'use strict';
 
 import { APIKEY, NAPSTER_API, MAIN_CONTAINER  } from '../constants.js';
-import {
-  clearDOMElement,
-  getDOMElement,
-} from '../utils/DOMUtils.js';
-
+import { clearDOMElement,getDOMElement} from '../utils/DOMUtils.js';
 import {displayTracks }from './handleTracks.js';
 import{fetchData } from './mainFetchDataFun.js';
 

@@ -16,13 +16,13 @@ export const createArtistPageHeader= (coverImgUrl, artistNameTxt,artistBioTxt)=>
     const artistName = createDOMElement('h2', {id : 'artist-Name'});
    coverImage.src = coverImgUrl;
     artistName.textContent= artistNameTxt;
-    headerContainer.append( coverImage,artistName);
+    headerContainer.append( overImage,artistName);
     if(artistBioTxt){
       const artistBio = createDOMElement('p', {id : 'artist-Bio'});
       artistBio.textContent= artistBioTxt;
       headerContainer.appendChild(artistBio );
     }
-   MAIN_CONTAINER.parentNode.insertBefore(headerContainer,  MAIN_CONTAINER)
+   MAIN_CONTAINER.parentNode.insertBefore(headerContainer,MAIN_CONTAINER)
 
   } 
 }
