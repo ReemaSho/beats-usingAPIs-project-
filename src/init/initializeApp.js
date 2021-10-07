@@ -1,19 +1,22 @@
 'use strict';
-import {loadMainPage,eventOnAudioElement} from '../listeners/appListeners.js';
+import {
+  loadMainPage,
+  eventOnAudioElement,
+} from '../listeners/appListeners.js';
 import { getTopTracks } from '../handlers/handleHomePage.js';
-import{ getTheInputValue }from '../handlers/searchHandlers.js';
+import { getTheInputValue } from '../handlers/searchHandlers.js';
 import { createFooter } from '../views/footerViews.js';
-import { createNavBar} from '../views/navbarView.js';
-const initializeHomePage = async() => {
-  try{
+import { createNavBar } from '../views/navbarView.js';
+const initializeHomePage = async () => {
+  try {
     createNavBar();
-   await getTopTracks();
-     getTheInputValue();
+    await getTopTracks();
+    getTheInputValue();
     loadMainPage();
-   eventOnAudioElement();
-     createFooter();
-  }catch (error){
-    console.log(error)
+    eventOnAudioElement();
+    createFooter();
+  } catch (error) {
+    console.log(error);
   }
 };
 
