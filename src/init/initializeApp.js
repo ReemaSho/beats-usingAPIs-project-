@@ -5,7 +5,6 @@ import{ getTheInputValue }from '../handlers/searchHandlers.js';
 import { createFooter } from '../views/footerViews.js';
 import { createNavBar} from '../views/navbarView.js';
 const initializeHomePage = async() => {
-
   try{
     createNavBar();
    await getTopTracks();
@@ -16,11 +15,6 @@ const initializeHomePage = async() => {
   }catch (error){
     console.log(error)
   }
-
-
-
-  
- 
 };
 
 window.addEventListener('load', initializeHomePage);
