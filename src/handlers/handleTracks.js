@@ -12,7 +12,7 @@ import {getFullAlbumTracks}from "./fullAlbums.js"
     clearDOMElement( MAIN_CONTAINER);
       const {tracks } = data;
       tracks.forEach((track) => {
-          const { albumId , albumName, artistName,links,name,previewURL} =  track;
+          const {albumId , albumName, artistName,links,name,previewURL} =  track;
           const {albums,artists} = links;
           const container = createTrackContainer(albumId)
           const audioEle =  createAudioElement(previewURL);

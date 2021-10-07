@@ -27,8 +27,12 @@ text-decoration: none;
 }
 .home ,#about {
  margin : 0 3%;
+ color: var(--chocolate);
 }
-
+#about a {
+    color: var(--chocolate);
+    text-decoration: none;  
+}
 #searchField{
  border:1px solid var(--chocolate);
 

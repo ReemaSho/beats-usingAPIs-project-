@@ -21,7 +21,7 @@ export const createNavBar = ()=>{
   homePageEle.classList.add("home")
   homePageEle.textContent = "Home";
   const aboutEle = createDOMElement('div', {id : "about"})
-  aboutEle.textContent = "About";
+  aboutEle.innerHTML = "<a href= '#footer' > About</a>";
   const inputField = createDOMElement('input');
   Object.assign(inputField,{id :"searchField",className :'orm-control me-2',type:"search", placeholder:"Search", aria_label:"Search"})
   const headSection = createDOMElement("div", {id:"head-section"})
