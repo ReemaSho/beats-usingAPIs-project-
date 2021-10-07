@@ -19,7 +19,7 @@ import {getFullAlbumTracks}from "./fullAlbums.js"
           const  artistNameEle =  createTrackHeaders("h3",artistName,'- Top Tracks');
           artistNameEle.classList.add('artist-top-tracks')
           artistNameEle.addEventListener('click',()=>{
-             getArtistData(artists.href)
+             getArtistData(artists.href);
           } );
           const songName = createTrackHeaders("h4",name);
           
@@ -29,10 +29,8 @@ import {getFullAlbumTracks}from "./fullAlbums.js"
               getArtistData(artists.href);
               getFullAlbumTracks(albums.href);
             });
-            window.scrollTo(0,0)
             container.append(audioEle ,songName,artistNameEle, albumNameEle);
           }else{
-            window.scrollTo(0,0)
             container.append(audioEle ,artistNameEle, songName); 
           }
           window.scrollTo(0,0)

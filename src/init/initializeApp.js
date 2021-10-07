@@ -24,4 +24,3 @@ const initializeHomePage = async() => {
 };
 
 window.addEventListener('load', initializeHomePage);
-window.scrollTo(0,0)

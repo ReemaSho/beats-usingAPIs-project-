@@ -16,7 +16,7 @@ export const createArtistPageHeader= (coverImgUrl, artistNameTxt,artistBioTxt)=>
     const artistName = createDOMElement('h2', {id : 'artist-Name'});
    coverImage.src = coverImgUrl;
     artistName.textContent= artistNameTxt;
-    headerContainer.append( overImage,artistName);
+    headerContainer.append( coverImage,artistName);
     if(artistBioTxt){
       const artistBio = createDOMElement('p', {id : 'artist-Bio'});
       artistBio.textContent= artistBioTxt;
