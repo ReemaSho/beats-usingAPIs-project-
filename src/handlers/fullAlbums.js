@@ -4,7 +4,6 @@ import { APIKEY, MAIN_CONTAINER  } from '../constants.js';
 import {
   clearDOMElement,
 } from '../utils/DOMUtils.js';
-
 import {displayTracks }from './handleTracks.js';
 import{fetchData } from './mainFetchDataFun.js';
 
