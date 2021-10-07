@@ -5,8 +5,8 @@ import {
   clearDOMElement,
 } from '../utils/DOMUtils.js';
 
-import {fetchData ,displayTracks }from './mainHandlersFuns.js';
-
+import {displayTracks }from './handleTracks.js';
+import{fetchData } from './mainFetchDataFun.js';
 
 export const getFullAlbumTracks = async (albumHref )=>{
     const  url= `${albumHref}/tracks?apikey=${APIKEY}`;

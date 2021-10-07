@@ -6,8 +6,8 @@ import {
   getDOMElement,
 } from '../utils/DOMUtils.js';
 
-import {fetchData ,displayTracks }from './mainHandlersFuns.js';
-
+import {displayTracks }from './handleTracks.js';
+import{fetchData } from './mainFetchDataFun.js';
 
 export const getTopTracks = async () => {
   const url = `${NAPSTER_API}/v2.2/tracks/top?apikey=${APIKEY}&range=week&limit=40`;

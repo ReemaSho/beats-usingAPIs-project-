@@ -1,13 +1,13 @@
 
 import { APIKEY } from '../constants.js';
-import {createArtistPageHeader} from '../views/appViews.js';
+import {createArtistPageHeader} from '../views/artistPageView.js';
 import {
   getDOMElement,
 } from '../utils/DOMUtils.js';
 
-import {fetchData ,displayTracks }from './mainHandlersFuns.js';
+import {displayTracks }from './handleTracks.js';
 
-
+import{fetchData } from './mainFetchDataFun.js';
 
 export const getArtistData =async (artistHref )=>{
     const  imageUrl = `${artistHref}/images?apikey=${APIKEY}`

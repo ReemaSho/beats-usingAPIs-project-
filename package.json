@@ -10,7 +10,6 @@
   "author": "Reema Alshohof",
   "license": "ISC",
   "dependencies": {
-    "node-fetch": "^3.0.0",
     "prettier": "^2.4.1"
   }
 }
